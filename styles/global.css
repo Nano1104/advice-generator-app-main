@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+*,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --grayish-blue: hsl(217, 19%, 38%); /* need to look for the element to this color */
+    --p-color: hsl(193, 38%, 86%);
+    --card-color: hsl(217, 19%, 24%);
+    --bg-color: hsl(218, 23%, 16%);
+    --neon-color: hsl(150, 100%, 66%);
+    
+    --text-font: 'Manrope', sans-serif;
+
+    --size-quote: 28px;
+
+    --mobile-width: 375px;
+}
