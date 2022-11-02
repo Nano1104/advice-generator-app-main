@@ -1,12 +1,20 @@
 /* const URL = 'https://api.adviceslip.com'; */
 const URL = 'https://api.adviceslip.com/advice';
 
-
-//adds p elemnts to "advice-container" in the HTML file.
-$('.advice-container').append(` 
-                                <p class="advice-container__numAdvice"></p>
-                                <p class="advice-container__advice"></p>
-                            `)
+//creation of the card
+$('body').append(`
+                    <div class="card">
+                        <div class="advice-container">
+                            <p class="advice-container__numAdvice"></p>
+                            <p class="advice-container__advice"></p>
+                        </div>
+                    
+                        <img src="./images/pattern-divider-desktop.svg" class="card__divider">
+                        <button class="card__dice" id="dice">
+                            <img src="./images/icon-dice.svg">
+                        </button>
+                    </div>
+                `)
 
 function apiCall() {
     $.get(URL, (res, state) => {
@@ -22,6 +30,10 @@ function apiCall() {
 
 apiCall()
 
+
+
 $('#dice').click(() => {
-    apiCall()
+    setTimeout(() => {  //adds timeout as every advice is set after 2s.
+        apiCall();
+    }, 2000)
 })

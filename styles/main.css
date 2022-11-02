@@ -62,3 +62,21 @@ body {
     transition: .2s all;
     box-shadow: 0 0 20px var(--neon-color);
 }
+
+/*******************************************************************************************************/
+/* RESPONSIVE */
+@media screen and (max-width: 375px) {
+    .card {
+        width: 350px;
+        height: 350px;
+    }
+
+    .card__divider {
+        
+    }
+
+    .card__dice {
+        padding: 30px;
+        top: 60px;
+    }
+}
